@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     devise_for :users
 
     namespace :admin do
+      root :to => "articles#index"
+
       resources :articles
     end
 
