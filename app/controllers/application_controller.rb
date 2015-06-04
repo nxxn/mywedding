@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :set_locale
-  layout :layout_by_resource
 
   def default_url_options(options={})
     if I18n.locale != I18n.default_locale
