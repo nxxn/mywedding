@@ -1,0 +1,25 @@
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+  <%= link_to "New article", new_admin_article_path %>
+  <%- @articles.each do |article| %>
+    <div class="post-preview">
+      <a href="<%= admin_article_path(article) %>">
+        <h2 class="post-title">
+          <%= article.title %>
+        </h2>
+        <h3 class="post-subtitle">
+          <%= article.text %>
+        </h3>
+      </a>
+      <p class="post-meta">Posted <%= article.created_at.strftime("on %B %d %Y") %></p>
+      <% if article.active? %>
+        <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+      <% else %>
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      <% end %>
+      <%= link_to "Edit article", edit_admin_article_path(article), class: "admin_article_edit" %>
+      |
+      <%= link_to "Delete article", admin_article_path(article), :confirm => 'Уверена ли ты?', :method => :delete, class: "admin_article_delete" %>
+    </div>
+    <hr>
+  <% end %>
+</div>
