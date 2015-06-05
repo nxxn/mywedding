@@ -34,11 +34,11 @@
   </nav>
   <div class="container">
     <div class="row">
-      <%= link_to "LV", url_for(locale: :lv) %>
+      <%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active_locale' : ''}" %>
       |
-      <%= link_to "RU", url_for(locale: :ru) %>
+      <%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active_locale' : ''}" %>
       |
-      <%= link_to "EN", url_for(locale: :en) %>
+      <%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active_locale' : ''}" %>
       <%= yield %>
     </div>
   </div>

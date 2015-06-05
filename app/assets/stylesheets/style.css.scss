@@ -1,10 +1,21 @@
+/* Admin start */
+
 .navbar {
   border-radius: 0;
+}
+
+.active_locale {
+  color: green;
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-weight: 800;
+}
+
+.article_container {
+  max-width: 900px;
 }
 
 .post-preview > a > .post-title {
@@ -69,3 +80,5 @@ h1, h2, h3, h4, h5, h6 {
 .post-preview > .glyphicon-remove {
   color: red;
 }
+
+/* Admin end */

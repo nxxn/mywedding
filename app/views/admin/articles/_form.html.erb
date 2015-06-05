@@ -2,8 +2,12 @@
 
   <%= f.input :title  %>
   <%= f.input :text, as: :text, :input_html => { :rows => 10 } %>
+  <% if @article.main_image.present? %>
+    <%= image_tag @article.main_image.url(:medium), alt: "Main image" %>
+  <% end %>
+  <%= f.input :main_image, as: :file %>
   <%= f.input :active %>
 
-  <%= f.submit "Create article", class: "btn btn-default btn-success" %>
+  <%= f.submit "Сохранить", class: "btn btn-default btn-success" %>
 
 <% end %>
