@@ -1,6 +1,10 @@
 <div class="col-lg-10 col-lg-offset-1 col-md-12 article_container">
 
-  <%= link_to "Back", admin_articles_path %>
+  <%= link_to "Назад", admin_articles_path, class: "admin_article_back" %>
+  |
+  <%= link_to "Редактировать", edit_admin_article_path(@article), class: "admin_article_edit" %>
+  |
+  <%= link_to "Удалить", admin_article_path(@article), :confirm => 'Уверена ли ты?', :method => :delete, class: "admin_article_delete" %>
 
   <!-- Blog Post -->
 
@@ -21,7 +25,7 @@
 
   <!-- Post Content -->
   <p>
-    <%= @article.text %>
+    <%= @article.text.html_safe %>
   </p>
 
   <hr>

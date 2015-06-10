@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 900px;
 }
 
-.post-preview > a > .post-title {
+.post-preview  a .post-title {
   font-size: 30px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -27,34 +27,35 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.post-preview > a {
+.post-preview  a {
   color: #404040;
 }
 
-.post-preview > a:hover {
+.post-preview a:hover {
   color: #0085a1;
   text-decoration: none;
 }
 
-.post-preview > a > .post-subtitle {
+.post-preview a .post-subtitle {
   margin: 0;
   font-weight: 300;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.post-preview > .post-meta {
+.post-preview .post-meta {
   color: gray;
   font-size: 16px;
   font-style: italic;
   margin-top: 0;
 }
 
-.post-preview > .post-meta > a {
+.post-preview .post-meta a {
   text-decoration: none;
   color: #404040;
 }
 
-.post-preview > .post-meta > a:hover {
+.post-preview .post-meta a:hover {
   color: #0085a1;
 }
 
@@ -65,20 +66,30 @@ h1, h2, h3, h4, h5, h6 {
   background: #0085a1;
 }
 
-.post-preview > .admin_article_edit, .post-preview > .admin_article_edit:hover {
+.admin_article_edit, .admin_article_edit:hover {
   color: #337ab7;
 }
 
-.post-preview > .admin_article_delete, .post-preview > .admin_article_delete:hover {
+.admin_article_delete, .admin_article_delete:hover {
   color: red;
 }
 
-.post-preview > .glyphicon-ok {
+.admin_article_back, .admin_article_back:hover {
+  color: #303030;
+}
+
+.post-preview .glyphicon-ok {
   color: green;
 }
 
-.post-preview > .glyphicon-remove {
+.post-preview .glyphicon-remove {
   color: red;
+}
+
+.article_container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Admin end */

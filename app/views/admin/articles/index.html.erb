@@ -1,5 +1,5 @@
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-  <%= link_to "New article", new_admin_article_path %>
+  <%= link_to "Новая статья", new_admin_article_path %>
   <%- @articles.each do |article| %>
     <div class="post-preview">
       <a href="<%= admin_article_path(article) %>">
@@ -7,18 +7,18 @@
           <%= article.title %>
         </h2>
         <h3 class="post-subtitle">
-          <%= article.text %>
+          <%= truncate(article.text, length: 300, separator: ' ', escape: false) %>
         </h3>
       </a>
-      <p class="post-meta">Posted <%= article.created_at.strftime("on %B %d %Y") %></p>
+      <p class="post-meta">Создано <%= article.created_at.strftime("%B %d %Y") %></p>
       <% if article.active? %>
         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
       <% else %>
         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
       <% end %>
-      <%= link_to "Edit article", edit_admin_article_path(article), class: "admin_article_edit" %>
+      <%= link_to "Редактировать", edit_admin_article_path(article), class: "admin_article_edit" %>
       |
-      <%= link_to "Delete article", admin_article_path(article), :confirm => 'Уверена ли ты?', :method => :delete, class: "admin_article_delete" %>
+      <%= link_to "Удалить", admin_article_path(article), :confirm => 'Уверена ли ты?', :method => :delete, class: "admin_article_delete" %>
     </div>
     <hr>
   <% end %>

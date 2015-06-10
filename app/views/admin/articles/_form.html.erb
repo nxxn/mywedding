@@ -1,7 +1,9 @@
+<%= link_to "Назад", admin_articles_path, class: "admin_article_back" %>
+
 <%= simple_form_for [:admin, @article] do |f| %>
 
   <%= f.input :title  %>
-  <%= f.input :text, as: :text, :input_html => { :rows => 10 } %>
+  <%= f.input :text, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
   <% if @article.main_image.present? %>
     <%= image_tag @article.main_image.url(:medium), alt: "Main image" %>
   <% end %>

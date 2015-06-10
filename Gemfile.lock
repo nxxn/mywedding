@@ -58,6 +58,9 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    ckeditor (4.1.2)
+      cocaine
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -188,6 +191,7 @@ DEPENDENCIES
   awesome_print
   aws-sdk (< 2.0)
   byebug
+  ckeditor
   coffee-rails (~> 4.1.0)
   devise
   globalize (~> 5.0.0)
