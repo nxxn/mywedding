@@ -30,4 +30,8 @@
 
   <hr>
 
+  <p class="article_tags_list">Тэги: <%= raw @article.tag_list.map { |t| link_to "##{t}", admin_tag_path(t) }.join(', ') %></p>
+
+  <hr>
+
 </div>

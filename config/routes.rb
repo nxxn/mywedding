@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     namespace :admin do
       root :to => "articles#index"
 
+      get 'tags/:tag', to: 'articles#index', as: :tag
+
       resources :articles
     end
 

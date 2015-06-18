@@ -45,6 +45,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
     arel (6.0.0)
     awesome_print (1.6.1)
     aws-sdk (1.64.0)
@@ -88,6 +90,8 @@ GEM
     globalize (5.0.1)
       activemodel (>= 4.2.0, < 4.3)
       activerecord (>= 4.2.0, < 4.3)
+    html_truncator (0.4.1)
+      nokogiri (~> 1.5)
     i18n (0.7.0)
     jbuilder (2.2.16)
       activesupport (>= 3.0.0, < 5)
@@ -188,6 +192,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 3.4)
   awesome_print
   aws-sdk (< 2.0)
   byebug
@@ -195,6 +200,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   globalize (~> 5.0.0)
+  html_truncator (~> 0.2)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)

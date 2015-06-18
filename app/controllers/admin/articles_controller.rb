@@ -1,7 +1,11 @@
 class Admin::ArticlesController < AdminController
 
   def index
-    @articles = Article.all.order("updated_at DESC")
+    if params[:tag]
+      @articles = Article.tagged_with(params[:tag]).order("updated_at DESC")
+    else
+      @articles = Article.all.order("updated_at DESC")
+    end
   end
 
   def show
@@ -67,7 +71,7 @@ class Admin::ArticlesController < AdminController
   private
 
     def article_params
-      params.require(:article).permit(:title, :text, :active, :main_image)
+      params.require(:article).permit(:title, :text, :active, :main_image, :tag_list)
     end
 
 end

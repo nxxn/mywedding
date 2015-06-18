@@ -1,14 +1,16 @@
 <%= link_to "Назад", admin_articles_path, class: "admin_article_back" %>
+<br><br>
 
 <%= simple_form_for [:admin, @article] do |f| %>
 
-  <%= f.input :title  %>
-  <%= f.input :text, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
+  <%= f.input :title, label: "Заголовок статьи"  %>
+  <%= f.input :text, :as => :ckeditor, label: "Текст статьи", :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
   <% if @article.main_image.present? %>
     <%= image_tag @article.main_image.url(:medium), alt: "Main image" %>
   <% end %>
-  <%= f.input :main_image, as: :file %>
-  <%= f.input :active %>
+  <%= f.input :main_image, as: :file, label: "Главная картинка" %>
+  <%= f.input :active, label: "Активна ли статья?" %>
+  <%= f.input :tag_list, label: "Тэги(через запятую, без решетки)", as: :text %>
 
   <%= f.submit "Сохранить", class: "btn btn-default btn-success" %>
 
