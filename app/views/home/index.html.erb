@@ -1,0 +1,272 @@
+<section id="about_us" class="triangle">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-12 text-center wow to_animate animated pullDown" data-animation="pullDown" style="visibility: hidden;">
+
+        <div class="col-md-12">
+          <div class="tallykit-shortcode-heading style-1 ">
+            <!-- <h2 class="tk_title"><span><%= t('works') %></span></h2> -->
+            <span class="tk_bottomLine"></span>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="col-sm-12 wow to_animate fadeIn" data-animation="fadeInRight" style="visibility: hidden;">
+          <div class="teaser with_image">
+            <div class="teaser_description" style="text-align: center;">
+              <h3><%= t('website') %></h3>
+              <p><%= t('website_description') %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 wow to_animate fadeIn" data-animation="fadeInRight" style="visibility: hidden;">
+          <div class="teaser with_image">
+            <div class="teaser_description" style="text-align: center;">
+              <h3><%= t('articles') %></h3>
+              <p><%= t('articles_description') %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 wow to_animate fadeIn" data-animation="fadeInRight" style="visibility: hidden;">
+          <div class="teaser with_image">
+            <div class="teaser_description" style="text-align: center;">
+              <h3><%= t('shop') %></h3>
+              <p><%= t('shop_description') %></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our works -->
+<section class="triangle">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center wow to_animate pullDown" data-animation="pullDown" style="visibility: hidden;">
+
+        <div class="col-md-12">
+          <div class="tallykit-shortcode-heading style-1 ">
+            <!-- <h2 class="tk_title"><span><%= t('works') %></span></h2> -->
+            <span class="tk_bottomLine"></span>
+            <div class="clear"></div>
+          </div>
+        </div>
+
+        <p class="small_heading"><%= t('works_text').html_safe %></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="col-sm-12">
+          <div id="isotope_container" class="isotope row to_animate stretchRight">
+
+            <div class="isotope-item gallery-item col-md-4 col-sm-6 brand">
+              <div class="gallery-image portfolio-content">
+                <%= link_to image_tag("01.jpg"), "#" %>
+              </div>
+            </div>
+
+            <div class="isotope-item gallery-item col-md-4 col-sm-6 brand">
+              <div class="gallery-image portfolio-content">
+                <%= link_to image_tag("02.jpg"), "#" %>
+              </div>
+            </div>
+
+            <div class="isotope-item gallery-item col-md-4 col-sm-6 brand">
+              <div class="gallery-image portfolio-content">
+                <%= link_to image_tag("03.jpg"), "#" %>
+              </div>
+            </div>
+
+            <div class="isotope-item gallery-item col-md-4 col-sm-6 print">
+              <div class="gallery-image portfolio-content">
+                <%= link_to image_tag("04.jpg"), "#" %>
+              </div>
+            </div>
+
+            <div class="isotope-item gallery-item col-md-4 col-sm-6 print">
+              <div class="gallery-image portfolio-content">
+                <%= link_to image_tag("05.jpg"), "#" %>
+              </div>
+            </div>
+
+            <div class="isotope-item gallery-item col-md-4 col-sm-6 print">
+              <div class="gallery-image portfolio-content">
+                <%= link_to image_tag("06.jpg"), "#" %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Prices -->
+<section>
+  <div class="row">
+    <div class="col-sm-12 text-center wow to_animate pullDown">
+      <div class="col-md-12">
+        <div class="tallykit-shortcode-heading style-1 ">
+          <!-- <h2 class="tk_title"><span><%= t('prices') %></span></h2> -->
+          <span class="tk_bottomLine"></span>
+          <div class="clear"></div>
+        </div>
+
+        <p class="small_heading"><%= t('prices_text') %></p>
+      </div>
+      <div class="col-sm-12 pricing__items">
+        <div class="col-sm-3">
+          <div class="pricing__item pricing__item_one">
+            <div class="pricing-item__title">
+              <%= t('price_first') %>
+            </div>
+            <div class="pricing-item__price">
+              10<span>€</span>
+            </div>
+            <div class="pricing-item__summary">
+              <%= t('prices_first_text').html_safe %>
+            </div>
+            <a href="#" class="btn btn-default">
+              <span class="oi oi-cart"></span> <%= t('more_info') %>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="pricing__item pricing__item_two">
+            <div class="pricing-item__title">
+              <%= t('price_second') %>
+            </div>
+            <div class="pricing-item__price">
+              20<span>€</span>
+            </div>
+            <div class="pricing-item__summary">
+              <%= t('prices_second_text').html_safe %>
+            </div>
+            <a href="#" class="btn btn-default">
+              <span class="oi oi-cart"></span> <%= t('more_info') %>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="pricing__item pricing__item_three">
+            <div class="pricing-item__title">
+              <%= t('price_third') %>
+            </div>
+            <div class="pricing-item__price">
+              30<span>€</span>
+            </div>
+            <div class="pricing-item__summary">
+              <%= t('prices_third_text').html_safe %>
+            </div>
+            <a href="#" class="btn btn-default">
+              <span class="oi oi-cart"></span> <%= t('more_info') %>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="pricing__item pricing__item_four">
+            <div class="pricing-item__title">
+              <%= t('price_fourth') %>
+            </div>
+            <div class="pricing-item__price">
+              40<span>€</span>
+            </div>
+            <div class="pricing-item__summary">
+              <%= t('prices_fourth_text').html_safe %>
+            </div>
+            <a href="#" class="btn btn-default">
+              <span class="oi oi-cart"></span> <%= t('more_info') %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Articles -->
+<section class="container-fluid">
+  <div class="col-md-12">
+    <div class="tallykit-shortcode-heading style-1 ">
+      <!-- <h2 class="tk_title"><span><%= t('prices') %></span></h2> -->
+      <span class="tk_bottomLine"></span>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <% @articles.each_slice(4) do |slice| -%>
+      <div class="row">
+        <% slice.each do |article| -%>
+          <div class="col-md-3 wow fadeIn">
+            <div class="post-preview">
+              <a href="<%= article_path(article) %>">
+                <p class="post-meta"><%= l(article.created_at, :format => '%d %B %Y') %></p>
+                <%= image_tag article.main_image(:medium), class: "img-responsive" %>
+                <h3>
+                  <%= article.title %>
+                </h3>
+                <p>
+                  <%= article.short_description %>
+                </p>
+              </a>
+            </div>
+          </div>
+        <% end -%>
+      </div>
+    <% end -%>
+  </div>
+</section>
+
+<!-- Contact Us -->
+<div id="section-contact" class="text-center">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="tallykit-shortcode-heading style-1 ">
+          <!-- <h2 class="tk_title"><span><%= t('contact_us') %></span></h2> -->
+          <span class="tk_bottomLine"></span>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="emailaddress"><%= t('email') %></label>
+              <input type="email" class="form-control" id="emailaddress" placeholder="<%= t('email') %>">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="namearea"><%= t('name') %></label>
+              <input type="text" class="form-control" id="namearea" placeholder="<%= t('name') %>">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="messagearea"><%= t('message') %></label>
+          <textarea class="form-control" placeholder="<%= t('message') %>" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn custom-btn btn-default"><%= t('send') %></button>
+      </form>
+
+    </div>
+  </div>
+
+</div>

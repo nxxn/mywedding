@@ -11,7 +11,7 @@
         </h3>
       </a>
       <p class="article_tags_list">Тэги: <%= raw article.tag_list.map { |t| link_to "##{t}", admin_tag_path(t) }.join(', ') %></p>
-      <p class="post-meta">Создано <%= article.created_at.strftime("%B %d %Y") %></p>
+      <p class="post-meta"><%= l(article.created_at, :format => '%d %B %Y') %></p>
       <% if article.active? %>
         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
       <% else %>

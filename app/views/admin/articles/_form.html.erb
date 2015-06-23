@@ -4,6 +4,7 @@
 <%= simple_form_for [:admin, @article] do |f| %>
 
   <%= f.input :title, label: "Заголовок статьи"  %>
+  <%= f.input :short_description, label: "Краткое описание", as: :text  %>
   <%= f.input :text, :as => :ckeditor, label: "Текст статьи", :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
   <% if @article.main_image.present? %>
     <%= image_tag @article.main_image.url(:medium), alt: "Main image" %>

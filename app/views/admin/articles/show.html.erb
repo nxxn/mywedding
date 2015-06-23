@@ -14,7 +14,7 @@
   <hr>
 
   <!-- Date/Time -->
-  <p><span class="glyphicon glyphicon-time"></span> Posted on <%= l @article.created_at, format: "%d %B %Y" %></p>
+  <p><span class="glyphicon glyphicon-time"></span> <%= l(@article.created_at, :format => '%d %B %Y') %></p>
 
   <hr>
 

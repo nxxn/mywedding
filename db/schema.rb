@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150611145847) do
+ActiveRecord::Schema.define(version: 20150621112410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "article_translations", force: :cascade do |t|
-    t.integer  "article_id", null: false
-    t.string   "locale",     null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "article_id",        null: false
+    t.string   "locale",            null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "title"
     t.text     "text"
+    t.text     "short_description"
   end
 
   add_index "article_translations", ["article_id"], name: "index_article_translations_on_article_id", using: :btree

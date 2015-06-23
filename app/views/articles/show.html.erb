@@ -1,0 +1,23 @@
+<div class="container">
+  <article>
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <hr>
+
+      <!-- Date/Time -->
+      <p><%= l(@article.created_at, :format => '%d %B %Y') %></p>
+
+      <hr>
+
+      <%= image_tag @article.main_image(:original), class: "img-responsive" %>
+
+      <h2 class="section-heading"><%= @article.title %></h2>
+
+      <%= @article.text.html_safe %>
+
+      <hr>
+
+      <p class="article_tags_list">Тэги: <%= raw @article.tag_list.map { |t| link_to "##{t}", tag_path(t) }.join(', ') %></p>
+
+    </div>
+  </article>
+</div>

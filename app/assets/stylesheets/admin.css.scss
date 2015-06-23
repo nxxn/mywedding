@@ -1,0 +1,103 @@
+/* Admin layout start */
+
+.navbar {
+  border-radius: 0;
+}
+
+.active_locale {
+  color: green;
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-weight: 800;
+}
+
+.article_container {
+  max-width: 900px;
+}
+
+.post-preview  a .post-title {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  @media only screen and (min-width: 768px)  {
+    font-size: 36px;
+  }
+}
+
+.post-preview  a {
+  color: #404040;
+}
+
+.post-preview a:hover {
+  color: #0085a1;
+  text-decoration: none;
+}
+
+.post-preview a .post-subtitle {
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-preview .post-meta {
+  color: gray;
+  font-size: 16px;
+  font-style: italic;
+  margin-top: 0;
+}
+
+.post-preview .post-meta a {
+  text-decoration: none;
+  color: #404040;
+}
+
+.post-preview .post-meta a:hover {
+  color: #0085a1;
+}
+
+::selection {
+  color: #fff;
+  text-shadow: none;
+  text-decoration: none;
+  background: #0085a1;
+}
+
+.admin_article_edit, .admin_article_edit:hover {
+  color: #337ab7;
+}
+
+.admin_article_delete, .admin_article_delete:hover {
+  color: red;
+}
+
+.admin_article_back, .admin_article_back:hover {
+  color: #303030;
+}
+
+.post-preview .glyphicon-ok {
+  color: green;
+}
+
+.post-preview .glyphicon-remove {
+  color: red;
+}
+
+.article_container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.article_tags_list a {
+   color: #4A46CD;
+}
+
+.article_tags_list a:hover {
+  color: #070383;
+}
+
+/* Admin layout end */
