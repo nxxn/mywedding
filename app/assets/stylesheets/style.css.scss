@@ -313,18 +313,6 @@ p.post-meta > a {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-footer {
-  padding: 50px 0 65px;
-}
-footer .list-inline {
-  margin: 0;
-  padding: 0;
-}
-footer .copyright {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 0;
-}
 .floating-label-form-group {
   font-size: 14px;
   position: relative;
@@ -1289,3 +1277,33 @@ portfolio
 }
 
 /* Back to top end */
+
+/* Footer */
+.socials_list i {
+  font-size: 46px;
+}
+footer {
+  padding: 35px 0 50px;
+}
+footer .list-inline {
+  margin: 0;
+  padding: 0;
+}
+footer .copyright {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.footer_made_by {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #787878;
+  text-align: center;
+}
+.footer_made_by a {
+  text-decoration: none;
+  color: #000;
+}
+.footer_made_by a span {
+  color: #37c430;
+}
