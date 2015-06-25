@@ -1289,6 +1289,68 @@ portfolio
 
 /* Back to top end */
 
+/* To contacts start */
+
+.cd-top-envelope {
+  z-index: 148;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #2d2c2c asset-data-url('cd-envelope.png') no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top-envelope.cd-is-visible, .cd-top-envelope.cd-fade-out, .cd-top-envelope:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.cd-top-envelope.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: .5;
+}
+.cd-top-envelope.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.cd-top-envelope:hover {
+  background-color: #2d2c2c;
+  opacity: 1;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top-envelope {
+    left: 20px;
+    bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cd-top-envelope {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cd-top-envelope {
+    height: 50px;
+    width: 50px;
+    left: 10px;
+    bottom: 40px;
+  }
+}
+
+/* To contacts end */
+
 /* Footer */
 .socials_list i {
   font-size: 46px;
