@@ -6,7 +6,7 @@ en:
   works: "Our work"
   contacts: "Contacts"
   shop: "Shop"
-  home: "Home"
+  home: "<span class='glyphicon glyphicon-home' aria-hidden='true'></span>"
   prices: "Prices"
   contact_us: "Contact us"
 
@@ -34,33 +34,33 @@ en:
   price_fourth: "Индивидуальный"
 
   prices_first_text: "
-  - Фото <br>
-  - Ваша история <br>
-  - Приглашение <br>
-  - Share <br>
-  - Карта <br>
-  - Контакты <br>"
+    Фото <br>
+    Ваша история <br>
+    Приглашение <br>
+    Share <br>
+    Карта <br>
+    Контакты <br>"
 
   prices_second_text: "
-  - Стартовый пакет <br>
-  - Больше фото <br>
-  - Поздравления <br>
-  - Wish list <br> "
+    Стартовый пакет <br>
+    Больше фото <br>
+    Поздравления <br>
+    Wish list <br> "
 
   prices_third_text: "
-  - Обычный пакет <br>
-  - План свадьбы <br>
-  - План столиков <br>
-  - Фото обменник <br>
-  - Перевод сайта <br> "
+    Обычный пакет <br>
+    План свадьбы <br>
+    План столиков <br>
+    Фото обменник <br>
+    Перевод сайта <br> "
 
   prices_fourth_text: "
-  - Дополнительный пакет <br>
-  - Музыка <br>
-  - Видео <br>
-  - Блог <br>
-  - План девишника <br>
-  - План мальчишника <br>"
+    Дополнительный пакет <br>
+    Музыка <br>
+    Видео <br>
+    Блог <br>
+    План девишника <br>
+    План мальчишника <br>"
 
   more_info: "Подробнее"
 

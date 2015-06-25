@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Mywedding</title>
+  <meta name=viewport content="width=device-width, initial-scale=1">
 
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
@@ -55,7 +56,7 @@
             <li><%= link_to t('shop'), articles_path, class: "#{params[:controller] == 'shop' ? 'active' : ''}" %></li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right locale_navbar">
             <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
             <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
             <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
@@ -124,8 +125,8 @@
               </a>
             </li>
           </ul>
-          <p class="copyright text-muted">© 2015 <a href="http://forbetterweb.com">Your Website</a>
-            We <i class="fa fa-heart"></i> <a href="http://forbetterweb.com">Code Design</a></p>
+          <p class="copyright text-muted">© 2015 <a href="">Your Website</a>
+            We <i class="fa fa-heart"></i> <a href="">Code Design</a></p>
           </div>
         </div>
       </footer>
