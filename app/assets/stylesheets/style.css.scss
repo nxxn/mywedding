@@ -135,9 +135,20 @@ hr.small {
     transform: translate3d(0, 100%, 0);
   }
 }
+.locale_navbar_mobile {
+  display: none;
+}
 @media only screen and (max-width: 768px) {
   .locale_navbar {
-    border-top: 1px solid #e7e7e7;
+    display: none;
+  }
+  .locale_navbar_mobile {
+    display: block;
+    float: left;
+    margin-left: 7px;
+  }
+  .locale_navbar_mobile li {
+    float: left;
   }
 }
 
