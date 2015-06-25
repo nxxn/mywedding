@@ -1,12 +1,29 @@
 /* Admin layout start */
 
+.container {
+  padding-bottom: 20px;
+}
+
 .navbar {
   border-radius: 0;
 }
 
 .active_locale {
-  color: green;
+  color:#25c5ed !important;
   font-weight: bold;
+}
+
+.new_article_link.btn-default {
+  border: 2px solid #9a9a9a;
+  background: transparent;
+  color: #9a9a9a;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.admin_articles_row {
+  margin-top: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
