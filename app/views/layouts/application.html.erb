@@ -10,8 +10,12 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= favicon_link_tag %>
+
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <a href="#0" class="cd-top">Top</a>
   <a href="#1" class="cd-top-envelope">Contacts</a>
@@ -57,7 +61,6 @@
             <li><%= link_to t('articles'), articles_path, class: "#{params[:controller] == 'articles' ? 'active' : ''}" %></li>
             <li><%= link_to t('works'), articles_path, class: "#{params[:controller] == 'works' ? 'active' : ''}" %></li>
             <li><%= link_to t('prices'), articles_path, class: "#{params[:controller] == 'prices' ? 'active' : ''}" %></li>
-            <!-- <li><%= link_to t('about'), articles_path, class: "#{params[:controller] == 'about' ? 'active' : ''}" %></li> -->
             <li><%= link_to t('contacts'), articles_path, class: "#{params[:controller] == 'contacts' ? 'active' : ''}" %></li>
             <li><%= link_to t('shop'), articles_path, class: "#{params[:controller] == 'shop' ? 'active' : ''}" %></li>
           </ul>
