@@ -4,10 +4,11 @@ class Admin::ArticlesController < AdminController
     lv_locale = I18n.locale == :lv
     ru_locale = I18n.locale == :ru
     en_locale = I18n.locale == :en
+    @articles = Article.where( "lv = ? OR ru = ? OR en = ?", lv_locale, ru_locale, en_locale ).order("created_at DESC")
     if params[:tag]
-      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale).tagged_with(params[:tag]).order("created_at DESC")
+      @articles.tagged_with(params[:tag])
     else
-      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale).order("created_at DESC")
+      @articles
     end
   end
 
@@ -74,7 +75,7 @@ class Admin::ArticlesController < AdminController
   private
 
     def article_params
-      params.require(:article).permit(:title, :short_description, :text, :active, :main_image, :tag_list)
+      params.require(:article).permit(:title, :short_description, :text, :active, :main_image, :tag_list, :lv, :ru, :en)
     end
 
 end

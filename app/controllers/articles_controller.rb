@@ -4,10 +4,11 @@ class ArticlesController < ApplicationController
     lv_locale = I18n.locale == :lv
     ru_locale = I18n.locale == :ru
     en_locale = I18n.locale == :en
+    @articles = Article.where( "lv = ? OR ru = ? OR en = ? AND active = ?", lv_locale, ru_locale, en_locale, true ).order("created_at DESC")
     if params[:tag]
-      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale, active: true).tagged_with(params[:tag]).order("created_at DESC")
+      @articles.tagged_with(params[:tag])
     else
-      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale, active: true).order("created_at DESC")
+      @articles
     end
   end
 
