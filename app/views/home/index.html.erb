@@ -1,6 +1,6 @@
 <section id="about_us" class="triangle">
   <div class="row">
-    <div class="col-sm-12 text-center wow to_animate animated pullDown" data-animation="pullDown" style="visibility: hidden;">
+    <div class="col-sm-12 text-center wow to_animate animated pullDown">
 
       <div class="col-md-12">
         <div class="tallykit-shortcode-heading style-1 about_tallykit">
@@ -13,27 +13,27 @@
 
   <div class="row">
     <div class="col-lg-12">
-      <div class="col-sm-12 wow to_animate fadeIn" data-animation="fadeInRight" style="visibility: hidden;">
+      <div class="col-sm-12 wow to_animate fadeIn">
         <div class="teaser with_image">
-          <div class="teaser_description" style="text-align: center;">
+          <div class="teaser_description text-center">
             <h3><%= t('website') %></h3>
             <p><%= t('website_description') %></p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-12 wow to_animate fadeIn" data-animation="fadeInRight" style="visibility: hidden;">
+      <div class="col-sm-12 wow to_animate fadeIn">
         <div class="teaser with_image">
-          <div class="teaser_description" style="text-align: center;">
+          <div class="teaser_description text-center">
             <h3><%= t('articles') %></h3>
             <p><%= t('articles_description') %></p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-12 wow to_animate fadeIn" data-animation="fadeInRight" style="visibility: hidden;">
+      <div class="col-sm-12 wow to_animate fadeIn">
         <div class="teaser with_image">
-          <div class="teaser_description" style="text-align: center;">
+          <div class="teaser_description text-center">
             <h3><%= t('shop') %></h3>
             <p><%= t('shop_description') %></p>
           </div>
@@ -47,7 +47,7 @@
 <!-- Our works -->
 <section class="triangle">
   <div class="row">
-    <div class="col-sm-12 text-center wow to_animate pullDown" data-animation="pullDown" style="visibility: hidden;">
+    <div class="col-sm-12 text-center wow to_animate pullDown">
 
       <div class="col-md-12">
         <div class="tallykit-shortcode-heading style-1 works_tallykit">
@@ -201,7 +201,7 @@
     <% @articles.each_slice(4) do |slice| -%>
       <div class="row">
         <% slice.each do |article| -%>
-          <div class="col-md-3 wow fadeIn">
+          <div class="col-md-3">
             <div class="post-preview">
               <a href="<%= article_path(article) %>">
                 <p class="post-meta"><%= l(article.created_at, :format => '%d %B %Y') %></p>
