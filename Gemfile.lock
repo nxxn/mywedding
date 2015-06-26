@@ -87,9 +87,6 @@ GEM
     execjs (2.5.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
-    globalize (5.0.1)
-      activemodel (>= 4.2.0, < 4.3)
-      activerecord (>= 4.2.0, < 4.3)
     html_truncator (0.4.1)
       nokogiri (~> 1.5)
     i18n (0.7.0)
@@ -199,7 +196,6 @@ DEPENDENCIES
   ckeditor
   coffee-rails (~> 4.1.0)
   devise
-  globalize (~> 5.0.0)
   html_truncator (~> 0.2)
   jbuilder (~> 2.0)
   jquery-rails

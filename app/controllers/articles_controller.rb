@@ -1,18 +1,13 @@
 class ArticlesController < ApplicationController
 
   def index
+    lv_locale = I18n.locale == :lv
+    ru_locale = I18n.locale == :ru
+    en_locale = I18n.locale == :en
     if params[:tag]
-      if user_signed_in? && current_user.is_admin?
-        @articles = Article.all.tagged_with(params[:tag]).order("created_at DESC")
-      else
-        @articles = Article.where(active: true).tagged_with(params[:tag]).order("created_at DESC")
-      end
+      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale, active: true).tagged_with(params[:tag]).order("created_at DESC")
     else
-      if user_signed_in? && current_user.is_admin?
-        @articles = Article.all.order("created_at DESC")
-      else
-        @articles = Article.where(active: true).order("created_at DESC")
-      end
+      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale, active: true).order("created_at DESC")
     end
   end
 

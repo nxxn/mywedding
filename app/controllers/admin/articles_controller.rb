@@ -1,10 +1,13 @@
 class Admin::ArticlesController < AdminController
 
   def index
+    lv_locale = I18n.locale == :lv
+    ru_locale = I18n.locale == :ru
+    en_locale = I18n.locale == :en
     if params[:tag]
-      @articles = Article.tagged_with(params[:tag]).order("created_at DESC")
+      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale).tagged_with(params[:tag]).order("created_at DESC")
     else
-      @articles = Article.all.order("created_at DESC")
+      @articles = Article.where(lv: lv_locale, ru: ru_locale, en: en_locale).order("created_at DESC")
     end
   end
 

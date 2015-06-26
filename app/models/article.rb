@@ -1,6 +1,4 @@
 class Article < ActiveRecord::Base
-  translates :title, :text, :short_description
-
   acts_as_taggable
 
   has_attached_file :main_image,

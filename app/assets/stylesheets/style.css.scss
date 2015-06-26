@@ -699,6 +699,34 @@ label {
   box-shadow: transparent;
 }
 
+.small_heading {
+  margin-top: 0px;
+}
+
+#section-contact .small_heading {
+  color: #9a9a9a;
+}
+
+#section-contact .small_heading span {
+  display: block;
+  margin-top: 10px;
+}
+
+#section-contact .small_heading a {
+  color: #25c5ed;
+  text-decoration: none;
+}
+
+#section-contact .small_heading a:hover {
+  color: #0085a1;
+  text-decoration: underline;
+}
+
+#section-contact .small_heading .write_us_through_form {
+  margin-top: 20px;
+}
+
+
 button.btn.custom-btn.btn-default {
   float: none;
   background: #25c5ed;
@@ -734,7 +762,7 @@ button.btn.custom-btn.btn-default:hover {
 /* heading
 ====================================================*/
 @media (min-width: 768px) {
-  .tallykit-shortcode-heading{ display: block; margin: 60px 0 80px 0; }
+  .tallykit-shortcode-heading{ display: block; margin: 60px 0 60px 0; }
 }
 
 @media (max-width: 768px) {

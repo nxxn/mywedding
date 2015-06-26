@@ -48,7 +48,6 @@ gem 'devise'
 gem "paperclip", "~> 4.2"
 gem 'simple_form'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
-gem 'globalize', '~> 5.0.0'
 gem 'aws-sdk', '< 2.0'
 gem 'ckeditor'
 gem "html_truncator", "~>0.2"

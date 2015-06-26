@@ -67,6 +67,10 @@ ru:
 
   more_info: "Подробнее"
 
+  tel_whatsapp_viber: "Телефон, whatsapp, viber"
+  contacts_write_us: "Или напишите нам свой вопрос через форму:"
+
+
   date:
     abbr_day_names:
     - Вс
