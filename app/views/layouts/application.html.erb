@@ -90,30 +90,31 @@
               <span><%= t('tel_whatsapp_viber') %> <a href="tel://+371 26659556" class="contacts_number">+371 26659556</a></span>
               <span class="write_us_through_form"><%= t('contacts_write_us') %></span>
             </p>
+
+
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="emailaddress"><%= t('email') %></label>
+                    <input type="email" class="form-control" id="emailaddress" placeholder="<%= t('email') %>">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="namearea"><%= t('name') %></label>
+                    <input type="text" class="form-control" id="namearea" placeholder="<%= t('name') %>">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="messagearea"><%= t('message') %></label>
+                <textarea class="form-control" placeholder="<%= t('message') %>" rows="3"></textarea>
+              </div>
+
+              <button type="submit" class="btn custom-btn btn-default"><%= t('send') %></button>
+            </form>
           </div>
-
-          <form>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="emailaddress"><%= t('email') %></label>
-                  <input type="email" class="form-control" id="emailaddress" placeholder="<%= t('email') %>">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="namearea"><%= t('name') %></label>
-                  <input type="text" class="form-control" id="namearea" placeholder="<%= t('name') %>">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="messagearea"><%= t('message') %></label>
-              <textarea class="form-control" placeholder="<%= t('message') %>" rows="3"></textarea>
-            </div>
-
-            <button type="submit" class="btn custom-btn btn-default"><%= t('send') %></button>
-          </form>
         </div>
       </div>
     </section>

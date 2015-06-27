@@ -13,7 +13,17 @@
           <div class="col-md-3 wow fadeIn">
             <div class="post-preview">
               <a href="<%= admin_article_path(article) %>">
-                <p class="post-meta"><%= l(article.created_at, :format => '%d %B %Y') %></p>
+                <p class="post-meta">
+                  <%= l(article.created_at, :format => '%d %B %Y') %>
+                  |
+                  <% if article.lv? %>
+                    LV
+                  <% elsif article.ru? %>
+                    RU
+                  <% elsif article.en? %>
+                    EN
+                  <% end %>
+                </p>
                 <%= image_tag article.main_image(:medium), class: "img-responsive" %>
                 <h3>
                   <%= article.title %>

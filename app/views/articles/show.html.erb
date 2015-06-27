@@ -1,23 +1,16 @@
 <div class="container">
   <article>
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <hr>
-
-      <!-- Date/Time -->
-      <p><%= l(@article.created_at, :format => '%d %B %Y') %></p>
-
-      <hr>
-
-      <%= image_tag @article.main_image(:original), class: "img-responsive" %>
-
+    <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 article_container">
+      <%= image_tag @article.main_image(:original), class: "img-responsive", alt: "#{@article.title}" %>
       <h2 class="section-heading"><%= @article.title %></h2>
-
       <%= @article.text.html_safe %>
-
       <hr>
-
-      <p class="article_tags_list">Тэги: <%= raw @article.tag_list.map { |t| link_to "##{t}", tag_path(t) }.join(', ') %></p>
-
+      <div class="article_tags_list">
+        Тэги: <%= raw @article.tag_list.map { |t| link_to "##{t}", tag_path(t) }.join(', ') %>
+      </div>
+      <hr>
+      <!-- Date/Time -->
+      <span class="publishdate" itemprop="datePublished"><%= l(@article.created_at, :format => '%d %B %Y') %></span>
     </div>
   </article>
 </div>

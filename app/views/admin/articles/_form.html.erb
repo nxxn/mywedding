@@ -5,7 +5,7 @@
 
   <%= f.input :title, label: "Заголовок статьи"  %>
   <%= f.input :short_description, label: "Краткое описание", as: :text  %>
-  <%= f.input :text, :as => :ckeditor, label: "Текст статьи", :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
+  <%= f.input :text, :as => :ckeditor, label: "Текст статьи", :input_html => { :ckeditor => {:toolbar => 'Full', height: 600, width: 920} } %>
   <%= f.input :lv, label: "На латышском" %>
   <%= f.input :ru, label: "На русском" %>
   <%= f.input :en, label: "На английском" %>
