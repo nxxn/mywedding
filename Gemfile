@@ -53,3 +53,5 @@ gem 'aws-sdk', '< 2.0'
 gem 'ckeditor'
 gem "html_truncator", "~>0.2"
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'friendly_id', '~> 5.1.0'
+gem 'babosa'

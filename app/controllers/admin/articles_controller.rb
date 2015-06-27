@@ -1,10 +1,7 @@
 class Admin::ArticlesController < AdminController
 
   def index
-    lv_locale = I18n.locale == :lv
-    ru_locale = I18n.locale == :ru
-    en_locale = I18n.locale == :en
-    @articles = Article.where( "lv = ? OR ru = ? OR en = ?", lv_locale, ru_locale, en_locale ).order("created_at DESC")
+    @articles = Article.all.order("created_at DESC")
     if params[:tag]
       @articles.tagged_with(params[:tag])
     else
@@ -13,7 +10,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
 
     respond_to do |format|
       format.html
@@ -29,7 +26,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
 
   end
 
@@ -48,7 +45,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def update
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
 
 
 
@@ -64,7 +61,7 @@ class Admin::ArticlesController < AdminController
   end
 
   def destroy
-    @article = Article.find(params[:id])
+    @article = Article.friendly.find(params[:id])
     @article.destroy
 
     respond_to do |format|
