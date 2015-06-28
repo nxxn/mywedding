@@ -6,7 +6,7 @@
       <%= @article.text.html_safe %>
       <hr>
       <div class="article_tags_list">
-        Тэги: <%= raw @article.tag_list.map { |t| link_to "##{t}", tag_path(t) }.join(', ') %>
+        <%= raw @article.tag_list.map { |t| link_to "##{t}", tag_path(t) }.join(', ') %>
       </div>
       <hr>
       <!-- Date/Time -->
