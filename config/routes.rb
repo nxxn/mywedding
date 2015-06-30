@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
+  
   scope "(:locale)", :locale => /en|ru|lv/ do
-
-    root to: "home#index"
 
     devise_for :users
 
@@ -18,6 +17,8 @@ Rails.application.routes.draw do
 
       get 'tags/:tag', to: 'articles#index', as: :tag
     end
+
+    root to: "home#index"
 
   end
 
