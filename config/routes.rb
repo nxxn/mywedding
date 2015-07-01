@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
-  
+
   scope "(:locale)", :locale => /en|ru|lv/ do
 
     devise_for :users
@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     root to: "home#index"
 
   end
+
+  get '/:key(/*path)' => 'works#show'
 
 end
