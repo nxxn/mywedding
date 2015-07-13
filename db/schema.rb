@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630170609) do
+ActiveRecord::Schema.define(version: 20150708191257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,14 @@ ActiveRecord::Schema.define(version: 20150630170609) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+  create_table "greetings", force: :cascade do |t|
+    t.string   "from"
+    t.text     "text"
+    t.integer  "work_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -103,10 +111,26 @@ ActiveRecord::Schema.define(version: 20150630170609) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "wishes", force: :cascade do |t|
+    t.string   "name"
+    t.boolean  "checked",    default: false
+    t.integer  "work_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
   create_table "works", force: :cascade do |t|
-    t.string "name"
-    t.string "url"
-    t.text   "comments"
+    t.string   "name"
+    t.string   "url"
+    t.text     "comments"
+    t.integer  "order_number"
+    t.string   "work_image_file_name"
+    t.string   "work_image_content_type"
+    t.integer  "work_image_file_size"
+    t.datetime "work_image_updated_at"
+    t.boolean  "active"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
 end

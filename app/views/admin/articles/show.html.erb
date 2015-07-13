@@ -8,7 +8,7 @@
 
   <!-- Blog Post -->
   <%= image_tag @article.main_image(:original), class: "img-responsive", alt: "#{@article.title}" %>
-  <h2 class="section-heading"><%= @article.title %></h2>
+  <h1 class="section-heading"><%= @article.title %></h1>
   <%= @article.text.html_safe %>
   <hr>
   <%= raw @article.tag_list.map { |t| link_to "##{t}", tag_path(t) }.join(', ') %>

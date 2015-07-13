@@ -46,28 +46,28 @@ ru:
 
   prices_second_text: "
     Стартовый пакет <br>
-    Больше фото <br>
-    Поздравления <br>
-    Wish list <br> "
+    + Больше фото <br>
+    + Поздравления <br>
+    + Wish list <br> "
 
   prices_third_text: "
     Обычный пакет <br>
-    План свадьбы <br>
-    План столиков <br>
-    Фото обменник <br>
-    Перевод сайта <br> "
+    + План свадьбы <br>
+    + План столиков <br>
+    + Фото обменник <br>
+    + Перевод сайта <br> "
 
   prices_fourth_text: "
     Дополнительный пакет <br>
-    Музыка <br>
-    Видео <br>
-    Блог <br>
-    Девишник <br>
-    Мальчишник <br>"
+    + Музыка <br>
+    + Видео <br>
+    + Блог <br>
+    + Девишник <br>
+    + Мальчишник <br>"
 
   more_info: "Подробнее"
 
-  tel_whatsapp_viber: "Телефон, whatsapp, viber"
+  tel_whatsapp_viber: "Телефон, WhatsApp, Viber"
   contacts_write_us: "Или напишите нам свой вопрос через форму:"
 
 

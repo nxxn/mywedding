@@ -1,0 +1,59 @@
+.intro-header {
+  background-image: asset-data-url('works/works_11.jpg');
+}
+
+.intro-header .site-heading h1 {
+  font-family: 'Poiret One', cursive;
+}
+
+section .divider {
+  margin-bottom: 0px;
+}
+
+.divider_line {
+  border: 0;
+  border-top: 1px solid #BB1D1D;
+  display: inline-block;
+  margin: 5px 10px;
+  width: 40px;
+}
+.divider i {
+  color: #BB1D1D;
+}
+
+iframe, object, embed { width: 100%; }
+
+footer {
+  padding-top: 0px;
+}
+
+a:hover,
+a:focus {
+  color: #999;
+}
+
+#wishlist ul {
+  text-align: left;
+  margin-left: calc(50% - 70px);
+}
+
+#wishlist ul li {
+  margin: 10px 0;
+}
+
+#wishlist ul li .glyphicon-ok {
+  color: green;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#wishlist ul li s {
+  color: #ccc;
+  margin-left: 40px;
+}
+
+.checked_wish {
+  text-decoration: line-through;
+  color: #ccc;
+  margin-left: 40px !important;
+}

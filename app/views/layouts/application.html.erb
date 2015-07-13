@@ -22,17 +22,17 @@
   <!-- Page Header -->
   <header class="intro-header">
     <div class="container overlay">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="site-heading">
-            <%= link_to root_url do %>
+      <%= link_to root_url do %>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="site-heading">
               <h1>My Wedding</h1>
               <hr class="small">
               <span class="subheading"><%= t('header_text') %></span>
-            <% end %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
   </header>
 
@@ -59,7 +59,7 @@
           <ul id="menu-top" class="nav navbar-nav navbar-left">
             <li><%= link_to t('home').html_safe, root_path, class: "#{params[:controller] == 'home' ? 'active' : ''}" %></li>
             <li><%= link_to t('articles'), articles_path, class: "#{params[:controller] == 'articles' ? 'active' : ''}" %></li>
-            <li><%= link_to t('works'), articles_path, class: "#{params[:controller] == 'works' ? 'active' : ''}" %></li>
+            <li><%= link_to t('works'), works_path, class: "#{params[:controller] == 'works' ? 'active' : ''}" %></li>
             <li><%= link_to t('prices'), articles_path, class: "#{params[:controller] == 'prices' ? 'active' : ''}" %></li>
             <li><%= link_to t('shop'), articles_path, class: "#{params[:controller] == 'shop' ? 'active' : ''}" %></li>
           </ul>

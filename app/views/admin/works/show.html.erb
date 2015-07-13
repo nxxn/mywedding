@@ -1,0 +1,33 @@
+<div class="col-lg-10 col-lg-offset-1 col-md-12 work_container">
+
+  <%= link_to "Назад", admin_works_path, class: "admin_work_back" %>
+  |
+  <%= link_to "Редактировать", edit_admin_work_path(@work), class: "admin_work_edit" %>
+  |
+  <%= link_to "Удалить", admin_work_path(@work), :confirm => 'Уверена ли ты?', :method => :delete, class: "admin_work_delete" %>
+
+  <% if @work.active? %>
+    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+    <%= @work.order_number %>
+  <% else %>
+    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+  <% end %>
+
+  <!-- Blog Post -->
+  <%= image_tag @work.work_image(:original), class: "img-responsive", alt: "#{@work.name}" %>
+  <h2 class="section-heading"><%= @work.name %></h2>
+  <%= @work.comments.html_safe %>
+  <hr>
+  <hr>
+  <!-- Date/Time -->
+  <span class="publishdate" itemprop="datePublished"><%= l(@work.created_at, :format => '%d %B %Y') %></span>
+
+</div>
+
+<%= simple_form_for [:admin, @wish], url: admin_work_path(@work) do |f| %>
+
+  <%= f.input :name, label: "Название"  %>
+
+  <%= f.submit "Сохранить", class: "btn btn-default btn-success" %>
+
+<% end %>

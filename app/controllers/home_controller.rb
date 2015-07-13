@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     ru_locale = I18n.locale == :ru
     en_locale = I18n.locale == :en
     @articles = Article.where( "lv = ? AND ru = ? AND en = ? AND active = ?", lv_locale, ru_locale, en_locale, true ).limit(4).order("created_at DESC")
+    @works = Work.where(active: true).order("order_number ASC")
   end
 
 end

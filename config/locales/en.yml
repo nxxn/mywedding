@@ -62,10 +62,10 @@ en:
     Девишник <br>
     Мальчишник <br>"
 
-  more_info: "Подробнее"
+  more_info: "More info"
 
-  tel_whatsapp_viber: "Телефон, whatsapp, viber"
-  contacts_write_us: "Или напишите нам свой вопрос через форму:"
+  tel_whatsapp_viber: "Phone number, WhatsApp, Viber"
+  contacts_write_us: "Or just leave us a message below:"
 
   date:
     abbr_day_names:

@@ -2,7 +2,7 @@
   <article>
     <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 article_container">
       <%= image_tag @article.main_image(:original), class: "img-responsive", alt: "#{@article.title}" %>
-      <h2 class="section-heading"><%= @article.title %></h2>
+      <h1 class="section-heading"><%= @article.title %></h1>
       <%= @article.text.html_safe %>
       <hr>
       <div class="article_tags_list">

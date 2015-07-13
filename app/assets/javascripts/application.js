@@ -15,3 +15,4 @@
 //= require ckeditor/init
 //= require script
 //= require wow.min
+//= require wishes

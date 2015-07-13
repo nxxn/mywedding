@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     devise_for :users
 
     resources :articles
+    resources :works, only: [:index]
 
     get 'tags/:tag', to: 'articles#index', as: :tag
 
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
       root to: "articles#index"
 
       resources :articles
+      resources :works
 
       get 'tags/:tag', to: 'articles#index', as: :tag
     end
@@ -21,6 +23,9 @@ Rails.application.routes.draw do
     root to: "home#index"
 
   end
+
+  get '/submit_wish', to: 'works#submit_wish'
+  post '/send_greeting', to: 'works#send_greeting'
 
   get '/:key(/*path)' => 'works#show'
 

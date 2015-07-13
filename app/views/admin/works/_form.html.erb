@@ -1,0 +1,30 @@
+<%= link_to "Назад", admin_works_path, class: "admin_work_back" %>
+<br><br>
+
+<%= simple_form_for [:admin, @work] do |f| %>
+
+  <%= f.input :name, label: "Название"  %>
+  <%= f.input :url, label: "Ссылка"  %>
+  <%= f.input :comments, label: "Комментарии", as: :text  %>
+  <% if @work.work_image.present? %>
+    <%= image_tag @work.work_image.url(:medium), alt: "Main image" %>
+  <% end %>
+  <%= f.input :work_image, as: :file, label: "Главная картинка" %>
+  <%= f.input :active, label: "Отображать в примерах?" %>
+  <%= f.input :order_number, label: "Порядковый номер"  %>
+
+  <hr>
+
+  <b>Wishlist:</b>
+
+  <br><br>
+
+  <%= f.simple_fields_for :wishes do |builder| %>
+    <%= render 'wish_fields', f: builder %>
+  <% end %>
+  <%= link_to_add_fields "Добавить желание", f, :wishes %>
+  <br><br>
+
+  <%= f.submit "Сохранить", class: "btn btn-default btn-success" %>
+
+<% end %>

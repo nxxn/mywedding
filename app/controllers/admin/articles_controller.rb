@@ -30,7 +30,6 @@ class Admin::ArticlesController < AdminController
 
   end
 
-  # POST /notes
   def create
     @article = Article.new(article_params)
 
