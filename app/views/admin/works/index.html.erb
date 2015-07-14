@@ -14,6 +14,14 @@
             <div class="post-preview">
                 <p class="post-meta">
                   <%= l(work.created_at, :format => '%d %B %Y') %>
+                  |
+                  <% if work.lv? %>
+                    LV
+                  <% elsif work.ru? %>
+                    RU
+                  <% elsif work.en? %>
+                    EN
+                  <% end %>
                 </p>
                 <%= image_tag work.work_image(:medium), class: "img-responsive" %>
                 <h3>
