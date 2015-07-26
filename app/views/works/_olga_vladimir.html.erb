@@ -180,6 +180,41 @@
     </div>
   </section>
 
+  <section>
+    <div class="row">
+      <div class="col-sm-12 text-center wow to_animate animated pullDown">
+        <div class="col-md-12">
+          <p class="divider"><span class="divider_line"></span><i class="fa fa-heart"></i><span class="divider_line"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="small_heading text_center">
+          Тут вы можете ответить на приглашение
+        </p>
+
+        <%= simple_form_for :rsvp, url: rsvp_answer_path, remote: true, html: { id: 'rsvp_answer_form' } do |f| %>
+          <%= f.input :work_id, input_html: { value: @work.id }, as: :hidden %>
+          <div class="form-group">
+            <%= f.input :name, label: false, :input_html => { class: "form-control", placeholder: "Как вас зовут?", type: "email" }  %>
+          </div>
+          <div class="form-group">
+            <%= f.input :is_going_to_ceremony, as: :radio_buttons, label: "Вы пойдете на церемонию?", :input_html => { class: "form-control" }  %>
+          </div>
+          <div class="form-group">
+            <%= f.input :is_going_to_banket, as: :radio_buttons, label: "Вы пойдете на банкет?", :input_html => { class: "form-control" }  %>
+          </div>
+          <div class="form-group">
+            <%= f.input :comment, as: :text, label: false, :input_html => { class: "form-control", placeholder: "Ваш комментарий, по желанию", rows: 3 }  %>
+          </div>
+
+          <button type="submit" class="btn custom-btn btn-default">Отправить</button>
+        <% end %>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="row">
       <div class="col-md-12 text-center">

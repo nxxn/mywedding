@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+
+    <!-- Check if work ru -->
+    <% if @work.ru? %>
+
+      <p>
+        Гость ответил на ваше приглашение:
+      </p>
+      <p>
+        <b>Имя гостя:</b> <%= @person_name %>
+        <br>
+        <br>
+        <% if @is_going_to_ceremony == "true" %>
+          <b>Придет на церемонию</b>
+        <% else %>
+          <b>Не придет на церемонию</b>
+        <% end %>
+        <br>
+        <% if @is_going_to_banket == "true" %>
+          <b>Придет на банкет</b>
+        <% else %>
+          <b>Не придет на банкет</b>
+        <% end %>
+      </p>
+      <% unless @comment.blank? %>
+        <b>Гость оставил комментарий:</b>
+        <blockquote>
+          <p>
+            <%= @comment %>
+          </p>
+        </blockquote>
+      <% end %>
+
+    <!-- Check if work lv -->
+    <% elsif @work.lv? %>
+
+      <p>
+        Guest answered on your invitation:
+      </p>
+      <p>
+        <b>Guest name:</b> <%= @person_name %>
+        <br>
+        <br>
+        <% if @is_going_to_ceremony == "true" %>
+          <b>He'll be attending at ceremony</b>
+        <% else %>
+          <b>He'll not attend at ceremony</b>
+        <% end %>
+        <br>
+        <% if @is_going_to_banket == "true" %>
+          <b>He'll participate at banket</b>
+        <% else %>
+          <b>He'll not participate at banket</b>
+        <% end %>
+      </p>
+      <% unless @comment.blank? %>
+        <b>Guest left a comment for you:</b>
+        <blockquote>
+          <p>
+            <%= @comment %>
+          </p>
+        </blockquote>
+      <% end %>
+
+    <!-- Check if work en -->
+    <% elsif @work.en? %>
+
+      <p>
+        Guest answered on your invitation:
+      </p>
+      <p>
+        <b>Guest name:</b> <%= @person_name %>
+        <br>
+        <br>
+        <% if @is_going_to_ceremony == "true" %>
+          <b>He'll be attending at ceremony</b>
+        <% else %>
+          <b>He'll not attend at ceremony</b>
+        <% end %>
+        <br>
+        <% if @is_going_to_banket == "true" %>
+          <b>He'll participate at banket</b>
+        <% else %>
+          <b>He'll not participate at banket</b>
+        <% end %>
+      </p>
+      <% unless @comment.blank? %>
+        <b>Guest left a comment for you:</b>
+        <blockquote>
+          <p>
+            <%= @comment %>
+          </p>
+        </blockquote>
+      <% end %>
+
+    <% end %>
+
+  </body>
+</html>

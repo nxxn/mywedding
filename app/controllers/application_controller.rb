@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   before_filter :set_locale
+  before_filter :new_message
 
   def default_url_options(options={})
     if I18n.locale != I18n.default_locale
@@ -26,4 +27,9 @@ class ApplicationController < ActionController::Base
     # if params[:locale] is nil then I18n.default_locale will be used
     I18n.locale = params[:locale] ||= I18n.default_locale
   end
+
+  def new_message
+    @message = Message.new
+  end
+  
 end

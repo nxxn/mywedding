@@ -46,6 +46,18 @@ hr.small {
   border-color: white;
 }
 
+section {
+  padding: 40px 0;
+}
+
+#jivo-label-copyright {
+  display: none !important;
+}
+
+#navigation {
+  padding: 0px;
+}
+
 .navbar {
   margin: 0px;
 }
@@ -1343,4 +1355,101 @@ footer .copyright {
 }
 .footer_made_by a span {
   color: #37c430;
+}
+/* Footer end */
+
+#steps .icon_wrapper {
+  background: #f5f5f5;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#steps .icon_wrapper:hover {
+  background: #10b8c7;
+}
+
+#steps .icon_wrapper:hover i {
+  color: #fff;
+}
+
+#steps .icon_wrapper i {
+  color: #10b8c7;
+  text-align: center;
+  width: 100%;
+  line-height: 100px;
+  font-size: 48px;
+  margin-top: 2px;
+}
+
+#about_us {
+  padding: 40px 0 20px 0;
+  // background-color: #fff;
+  // background-image: asset-data-url('water-color-gradient-2.jpg');
+  // background-position: center center;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // background-size: cover;
+}
+
+#about_us .icon_wrapper {
+  background: #f5f5f5;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#about_us .icon_wrapper:hover {
+  background: #10b8c7;
+}
+
+#about_us .icon_wrapper:hover i {
+  color: #fff;
+}
+
+#about_us .icon_wrapper i {
+  color: #10b8c7;
+  text-align: center;
+  width: 100%;
+  line-height: 100px;
+  font-size: 48px;
+  margin-top: 2px;
+}
+
+.section-title.center {
+  padding-bottom: 40px;
+}
+
+.section-title.center h2 {
+  text-transform: uppercase;
+  color: #565656;
+  line-height: 42px;
+}
+
+.offers_container {
+  display: table;
+}
+
+.offers_image, .offers_text {
+  display: table-cell;
+  float: none;
+  vertical-align: middle;
+}
+
+.offers_image img {
+  margin-left: auto;
+  margin-right: auto;
 }

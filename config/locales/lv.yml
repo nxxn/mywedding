@@ -9,6 +9,7 @@ lv:
   home: "<span class='glyphicon glyphicon-home' aria-hidden='true'></span>"
   prices: "Cenas"
   contact_us: "Rakstiet mums"
+  messages: "Сообщения"
 
   email: "Jūsu e-pasts"
   name: "Jūsu vārds"
@@ -17,11 +18,17 @@ lv:
 
   website: "Kāzu mājaslapa"
 
-  website_description: "Kāzu mājaslapa – tas ir mūsdienīgi, moderni un ērti! Veidojiet skaistu mājaslapu par jūsu mīlestības stāstu, padariet kazu organizēšanu daudz vieglāku: uzaiciniet viesus, saņiemiet apsveikuus no tiem, kas nevarēs personīgi apsveikt jūs vai ļaujiet viesiem atstāt komentārus pēc svinībām, izveidojiet vēlamo dāvanu sarakstu. Draugiem un paziņam nevajadzēs zvanīt jums simtiem reižu un vaicāt, kā tikt līdz svinību vietai vai prasīt par dress-kodu. Kāzu dienas plāns atbrīvos jūs no šīm problēmam. Bet pēc kāzu un medus mēneša beigām jūs varēsiet viegli ieladēt visas fotogrāfijas un video savā personīga kāzu albumā un aizsūtit linku pa epastu vai izvietot to savos sociālajos tīklos."
+  # website_description: "Kāzu mājaslapa – tas ir mūsdienīgi, moderni un ērti! Veidojiet skaistu mājaslapu par jūsu mīlestības stāstu, padariet kazu organizēšanu daudz vieglāku: uzaiciniet viesus, saņiemiet apsveikuus no tiem, kas nevarēs personīgi apsveikt jūs vai ļaujiet viesiem atstāt komentārus pēc svinībām, izveidojiet vēlamo dāvanu sarakstu. Draugiem un paziņam nevajadzēs zvanīt jums simtiem reižu un vaicāt, kā tikt līdz svinību vietai vai prasīt par dress-kodu. Kāzu dienas plāns atbrīvos jūs no šīm problēmam. Bet pēc kāzu un medus mēneša beigām jūs varēsiet viegli ieladēt visas fotogrāfijas un video savā personīga kāzu albumā un aizsūtit linku pa epastu vai izvietot to savos sociālajos tīklos."
+  #
+  # articles_description: "Mums vienmēr tikai visaktuālākā un visnoderīgākā informācija līgavainiem, viņu draugiem un radiem: padomi kāzu organizēšanai un dekorēšanai, kāzu apsveikumi un tosti, līgavas izpirkšanas iespējamie scenāriji un daudz kas cits."
+  #
+  # shop_description: "Mēs ceram, ka Jums patīks mūsu veikala plašs un daudzveidīgs suvenīru, dāvanu un aksesuāru piedāvājums."
 
-  articles_description: "Mums vienmēr tikai visaktuālākā un visnoderīgākā informācija līgavainiem, viņu draugiem un radiem: padomi kāzu organizēšanai un dekorēšanai, kāzu apsveikumi un tosti, līgavas izpirkšanas iespējamie scenāriji un daudz kas cits."
+  website_description: "Свабедный сайт – это стандарт современной свадьбы! Идеальное предложение для вашей свадьбы"
 
-  shop_description: "Mēs ceram, ka Jums patīks mūsu veikala plašs un daudzveidīgs suvenīru, dāvanu un aksesuāru piedāvājums."
+  articles_description: "Mums vienmēr tikai visaktuālākā un visnoderīgākā informācija līgavainiem, viņu draugiem un radiem"
+
+  shop_description: "Mēs ceram, ka Jums patīks mūsu veikala plašs suvenīru, dāvanu un aksesuāru piedāvājums"
 
   header_text: "Lai Jūsu kāzu mājaslapa vēsta Jūsu mīlestības stāstu"
 
@@ -67,6 +74,36 @@ lv:
 
   tel_whatsapp_viber: "Telefons, WhatsApp, Viber"
   contacts_write_us: "Vai rakstiet mums:"
+
+  three_steps: "3 простых шага до вашего идеального сваденого сайта"
+
+  first_step_heading: "Вы оставляете заявку"
+  second_step_heading: "Наш менеджер свяжется с вами для подробной консультации"
+  third_step_heading: "Мы делаем"
+
+  first_step_text: "Максимальный результат в минимальный срок!"
+  second_step_text: "Вы наслаждаетесь"
+  third_step_text: "Наша команда выполнила всё без хлопот и головной боли."
+
+  what_we_offer: "Что мы предлагаем!?"
+  why_choose_us: "Почему выбрать нас?"
+
+  what_we_offer_text: "
+    <p>
+      Мы предлагаем уникальный дизайн свадебного сайта, сделанного именно так, как вы хотите! Мы имеем большой опыт в создании как сложных, так и простых интернет-проектов. Неизменным остается только качество.
+    </p>
+    <p>
+       Ваш уют – наша забота. Этот принцип лежит в основе нашей команды. Мы дорожим своей репутацией. Поэтому, для нас крайне важно оставить у своих клиентов самые теплые воспоминания о работе с нами.
+    </p>"
+  why_choose_us_text: "
+    <p>
+      Свадебный сайт остаётся вашим навсегда. Никаких дополнительных ежемесячных или ежегодных доплат за домен или хостинг. Вы получаете уникальный, неповторимый дизайн. Ваши друзья смогут насладиться вашим сайтом с любого устройства, будь то телефон, планшет или компьютер.
+    </p>
+    <p>
+      Наша задача предложить Вам не самое дорогое решение, а предложить то решение, которое удовлетворит Ваши потребности и в котором нуждаетесь именно Вы.
+    </p>"
+
+  #i18n default
 
   date:
     abbr_day_names:

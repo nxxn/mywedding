@@ -16,3 +16,4 @@
 //= require script
 //= require wow.min
 //= require wishes
+//= require formValidation.min

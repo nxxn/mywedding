@@ -1,0 +1,26 @@
+<section>
+  <div class="container">
+    <h2>Сообщения</h2>
+    <br>
+    <% @messages.each do |message| %>
+      <div class="col-sm-12">
+        <p>
+          We have received a new message:
+        </p>
+        <p>
+          <b>Sender name:</b> <%= message.name %>
+          <br>
+          <b>Sender email:</b> <%= message.email %>
+        </p>
+        <b>Message:</b>
+        <blockquote>
+          <p>
+            <%= raw message.message %>
+          </p>
+        </blockquote>
+        <%= link_to "Удалить", admin_message_path(message), :confirm => 'Уверена ли ты?', :method => :delete, class: "admin_work_delete" %>
+        <hr>
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -13,4 +13,5 @@
  *= require_self
  *= require style
  *= require animate
+ =* require formValidation.min
  */

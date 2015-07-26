@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
       resources :articles
       resources :works
+      resources :messages
 
       get 'tags/:tag', to: 'articles#index', as: :tag
     end
@@ -26,6 +27,9 @@ Rails.application.routes.draw do
 
   get '/submit_wish', to: 'works#submit_wish'
   post '/send_greeting', to: 'works#send_greeting'
+
+  post '/new_contact_message', to: 'messages#send_new_contact_form_message'
+  post '/rsvp_answer', to: 'messages#rsvp_answer'
 
   get '/:key(/*path)' => 'works#show'
 

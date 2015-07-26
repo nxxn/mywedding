@@ -23,67 +23,66 @@
   <header class="intro-header">
     <div class="container overlay">
       <%= link_to root_url do %>
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="site-heading">
-              <h1>My Wedding</h1>
-              <hr class="small">
-              <span class="subheading"><%= t('header_text') %></span>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+            <h1>My Wedding</h1>
+            <hr class="small">
+            <span class="subheading"><%= t('header_text') %></span>
           </div>
         </div>
+      </div>
       <% end %>
     </div>
   </header>
 
-  <div class="container">
+  <section id="navigation">
+    <div class="container">
+      <nav id="wow-menu" class="navbar navbar-default on">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <ul class="nav navbar-nav navbar-right locale_navbar_mobile">
+              <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
+              <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
+              <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
+            </ul>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- Menu -->
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul id="menu-top" class="nav navbar-nav navbar-left">
+              <li><%= link_to t('home').html_safe, root_path, class: "#{params[:controller] == 'home' ? 'active' : ''}" %></li>
+              <li><%= link_to t('articles'), articles_path, class: "#{params[:controller] == 'articles' ? 'active' : ''}" %></li>
+              <li><%= link_to t('works'), works_path, class: "#{params[:controller] == 'works' ? 'active' : ''}" %></li>
+              <li><%= link_to t('prices'), articles_path, class: "#{params[:controller] == 'prices' ? 'active' : ''}" %></li>
+              <li><%= link_to t('shop'), articles_path, class: "#{params[:controller] == 'shop' ? 'active' : ''}" %></li>
+            </ul>
 
-    <nav id="wow-menu" class="navbar navbar-default on">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <ul class="nav navbar-nav navbar-right locale_navbar_mobile">
-            <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
-            <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
-            <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
-          </ul>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+            <ul class="nav navbar-nav navbar-right locale_navbar">
+              <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
+              <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
+              <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
+            </ul>
+          </div>
         </div>
-        <!-- Menu -->
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-          <ul id="menu-top" class="nav navbar-nav navbar-left">
-            <li><%= link_to t('home').html_safe, root_path, class: "#{params[:controller] == 'home' ? 'active' : ''}" %></li>
-            <li><%= link_to t('articles'), articles_path, class: "#{params[:controller] == 'articles' ? 'active' : ''}" %></li>
-            <li><%= link_to t('works'), works_path, class: "#{params[:controller] == 'works' ? 'active' : ''}" %></li>
-            <li><%= link_to t('prices'), articles_path, class: "#{params[:controller] == 'prices' ? 'active' : ''}" %></li>
-            <li><%= link_to t('shop'), articles_path, class: "#{params[:controller] == 'shop' ? 'active' : ''}" %></li>
-          </ul>
+      </nav>
+    </div>
+  </section>
 
-          <ul class="nav navbar-nav navbar-right locale_navbar">
-            <li><%= link_to "LV", url_for(locale: :lv), class: "#{I18n.locale == :lv ? 'active' : ''}" %></li>
-            <li><%= link_to "RU", url_for(locale: :ru), class: "#{I18n.locale == :ru ? 'active' : ''}" %></li>
-            <li><%= link_to "EN", url_for(locale: :en), class: "#{I18n.locale == :en ? 'active' : ''}" %></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <%= yield %>
 
-    <%= yield %>
-
-    <!-- Contact Us -->
-    <section>
+  <!-- Contact Us -->
+  <section>
+    <div class="container">
       <div id="section-contact" class="text-center">
         <div class="row">
           <div class="col-md-12">
-            <div class="tallykit-shortcode-heading style-1 contacts_tallykit">
-              <span class="tk_bottomLine"></span>
-              <div class="clear"></div>
-            </div>
 
             <p class="small_heading">
               <a href="mailto:info@mywedding.lv" class="contacts_email">info@mywedding.lv</a>
@@ -91,102 +90,159 @@
               <span class="write_us_through_form"><%= t('contacts_write_us') %></span>
             </p>
 
-
-            <form>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="emailaddress"><%= t('email') %></label>
-                    <input type="email" class="form-control" id="emailaddress" placeholder="<%= t('email') %>">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="namearea"><%= t('name') %></label>
-                    <input type="text" class="form-control" id="namearea" placeholder="<%= t('name') %>">
-                  </div>
+            <%= simple_form_for @message, url: new_contact_message_path, remote: true do |f| %>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="emailaddress"><%= t('email') %></label>
+                  <%= f.input :email, label: false, :input_html => { class: "form-control", placeholder: t('email'), type: "email", name: "email" }  %>
+                  <!-- <input type="email" class="form-control" id="emailaddress" placeholder="<%= t('email') %>"> -->
                 </div>
               </div>
-              <div class="form-group">
-                <label for="messagearea"><%= t('message') %></label>
-                <textarea class="form-control" placeholder="<%= t('message') %>" rows="3"></textarea>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="namearea"><%= t('name') %></label>
+                  <%= f.input :name, label: false, :input_html => { class: "form-control", placeholder: t('name'), name: "username" }  %>
+                  <!-- <input type="text" class="form-control" id="namearea" placeholder="<%= t('name') %>"> -->
+                </div>
               </div>
+            </div>
+            <div class="form-group">
+              <label for="messagearea"><%= t('message') %></label>
+              <%= f.input :message, label: false, :input_html => { class: "form-control", placeholder: t('message'), rows: 3, name: "message" }  %>
+              <!-- <textarea class="form-control" placeholder="<%= t('message') %>" rows="3"></textarea> -->
+            </div>
 
-              <button type="submit" class="btn custom-btn btn-default"><%= t('send') %></button>
-            </form>
+            <button type="submit" name="submitButton" class="btn custom-btn btn-default"><%= t('send') %></button>
+            <% end %>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
+  <!-- Footer -->
 
-    <hr>
+  <hr>
 
-    <footer>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <ul class="list-inline text-center socials_list">
-            <li>
-              <a href="">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-instagram"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-facebook"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-pinterest"></i>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-vk"></i>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <div class="footer_made_by">
-            Разработка сайта: <a href="http://gnotov.com/ru/contacts">gnotov.<span>com</span></a>
-          </div>
+  <section>
+    <div class="container">
+      <footer>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="list-inline text-center socials_list">
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-instagram"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-facebook"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-pinterest"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-vk"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="footer_made_by">
+              Разработка сайта: <a href="http://gnotov.com/ru/contacts">gnotov.<span>com</span></a>
+            </div>
           </div>
         </div>
       </footer>
-
     </div>
+  </section>
 
-    <%= javascript_include_tag 'application' %>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <!-- Modals start -->
+  <div class="modal fade" id="call_me_back_modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="modal_close_button" data-dismiss="modal"></span>
+          <!-- The form is placed inside the body of modal -->
+          <div class="col-sm-12 row">
+            <div class="col-xs-12 text-center">
+              <div class="section-title center">
+                <h2 class="text-center">Хотите мы вам перезвоним?</h2>
+              </div>
+            </div>
+            <div class="col-sm-6 modal_form_container">
+              <div class="col-xs-12 text-center small_title">
+                Мы работаем ПН-ВС с 9.00 до 21.00 <br>
+                Перезвоним Вам при первой возможности
+              </div>
 
-    <script>
-    new WOW().init();
-    </script>
+              <form id="loginForm" method="post" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-xs-10 col-xs-offset-1">Ваш номер*</label>
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <input type="text" class="form-control modal_user_name_input" name="phone", placeholder="Пример: +7 926 123-45-67" />
+                  </div>
+                </div>
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                <div class="form-group">
+                  <div class="col-xs-10 col-xs-offset-1">
+                    <button type="submit" class="col-xs-12 btn btn-default">Оставить заявку</button>
+                  </div>
+                </div>
+              </form>
+              <div class="col-xs-12 text-center small_title">
+                или позвоните нам по телефону <br> +7 (495) 669-14-20
+              </div>
+            </div>
+            <div class="col-sm-6 modal_form_image_container">
+              <!-- <%= image_tag ("woman_1.png"), class: "img-responsive" %> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      ga('create', 'UA-64546169-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+  <!-- Modals end -->
 
-    <!-- BEGIN JIVOSITE CODE {literal} -->
-      <script type='text/javascript'>
-      (function(){ var widget_id = '61A19vc6Au';
-      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
-    <!-- {/literal} END JIVOSITE CODE -->
 
-  </body>
-  </html>
+  <%= javascript_include_tag 'application' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <%= javascript_include_tag 'framework/bootstrap.min' %>
+
+  <script>
+  new WOW().init();
+  </script>
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64546169-1', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <% if I18n.locale == :ru %>
+  <!-- BEGIN JIVOSITE CODE {literal} -->
+  <script type='text/javascript'>
+  (function(){ var widget_id = '61A19vc6Au';
+  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+  <!-- {/literal} END JIVOSITE CODE -->
+  <% end %>
+
+</body>
+</html>

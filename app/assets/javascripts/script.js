@@ -36,4 +36,49 @@ $(document).ready(function() {
     	}, scroll_top_duration
 		);
 	});
+
+	$('#new_message').on('submit', function() {
+		$('#call_me_back_modal').modal('show');
+	});
+
+	$("#new_message").bind("ajax:complete", function(event,xhr,status) {
+  	$('#new_message').trigger("reset");
+	});
+
+	// Modals validation
+
+  // $('#new_message').formValidation({
+  //   framework: 'bootstrap',
+  //   locale: 'ru_RU',
+  //   excluded: [':disabled'],
+  //   icon: {
+  //     valid: 'glyphicon glyphicon-ok',
+  //     invalid: 'glyphicon glyphicon-remove',
+  //     validating: 'glyphicon glyphicon-refresh'
+  //   },
+  //   fields: {
+  //     email: {
+  //       validators: {
+  //         notEmpty: {
+  //           message: 'Представьтесь, пожалуйста'
+  //         }
+  //       }
+  //     },
+  //     username: {
+  //       validators: {
+  //         notEmpty: {
+  //           message: 'Укажите номер, на который перезвонить'
+  //         }
+  //       }
+  //     }
+	// 		message: {
+  //       validators: {
+  //         notEmpty: {
+  //           message: 'Укажите номер, на который перезвонить'
+  //         }
+  //       }
+  //     }
+  //   }
+  // });
+
 });
