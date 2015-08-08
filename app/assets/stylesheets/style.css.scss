@@ -86,7 +86,7 @@ section {
 
 .intro-header {
   background-color: #fff;
-  background-image: asset-data-url('header_image.jpg');
+  background-image: image-url('header_image.jpg');
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -717,7 +717,7 @@ button.btn.custom-btn.btn-default:hover {
   width: 100%;
   height: 20px;
   border-top: 0px solid;
-  background-image: asset-data-url('title_line.png');
+  background-image: image-url('title_line.png');
   background-position: center top;
   background-repeat: no-repeat;
   display: block;
@@ -1195,7 +1195,7 @@ portfolio
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: #2d2c2c asset-data-url('cd-top-arrow.svg') no-repeat center 50%;
+  background: #2d2c2c image-url('cd-top-arrow.svg') no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -1257,7 +1257,7 @@ portfolio
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-  background: #2d2c2c asset-data-url('cd-envelope.png') no-repeat center 50%;
+  background: #2d2c2c image-url('cd-envelope.png') no-repeat center 50%;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
@@ -1392,7 +1392,7 @@ footer .copyright {
 #about_us {
   padding: 40px 0 20px 0;
   // background-color: #fff;
-  // background-image: asset-data-url('water-color-gradient-2.jpg');
+  // background-image: image-url('water-color-gradient-2.jpg');
   // background-position: center center;
   // -webkit-background-size: cover;
   // -moz-background-size: cover;
