@@ -39,7 +39,7 @@ module Mywedding
     }
 
     config.action_mailer.default_url_options = {
-      :host => "gnotov.com"
+      :host => "mywedding.lv"
     }
   end
 end
